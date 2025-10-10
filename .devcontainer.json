@@ -1,20 +1,22 @@
-// See https://github.com/julia-vscode/julia-devcontainer/blob/master/Dockerfile for image contents
 {
-	"name": "Julia Development Container",
+	"name": "Julia 1.11 + Dynare Codespace",
 	"dockerFile": ".devcontainer/Dockerfile",
 
-	// Configure tool-specific properties.
+	// Persistent volume to cache Julia packages (avoids reinstall)
+	"mounts": [
+		"source=julia_cache,target=/home/vscode/.julia,type=volume"
+	],
+
+	// Script that installs Dynare.jl automatically (once)
+	"postCreateCommand": "bash .devcontainer/setup_dynare.sh",
+
 	"customizations": {
-		// Configure properties specific to VS Code.
 		"vscode": {
-			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"julialang.language-julia"
 			]
 		}
 	},
-
-	"postCreateCommand": "/julia-devcontainer-scripts/postcreate.jl",
 
 	"remoteUser": "vscode"
 }
