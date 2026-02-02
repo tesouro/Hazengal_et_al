@@ -1,14 +1,11 @@
 {
-	"name": "Julia 1.11 + Dynare Codespace",
+	"name": "Julia 1.6.4 + Dynare Codespace",
 	"dockerFile": ".devcontainer/Dockerfile",
 
 	// Persistent volume to cache Julia packages (avoids reinstall)
 	"mounts": [
 		"source=julia_cache,target=/home/vscode/.julia,type=volume"
 	],
-
-	// Script that installs Dynare.jl automatically (once)
-	"postCreateCommand": "bash .devcontainer/setup_dynare.sh",
 
 	"customizations": {
 		"vscode": {
