@@ -1,11 +1,8 @@
 # Julia Codespace Template
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/tesouro/julia_codespace_template)
-
-Template para fácil instanciação de um Codespace com Julia 1.11
+Template para fácil instanciação de um Codespace com Julia 1.6.4
 
 ## Como começar
-- Clique acima no botão `Open in GitHub Codespaces`.
 - Clique no botão verde `Create codespace`.
 - O Codespace (online vscode editor) será executado. Agora você pode usar Julia.
 - Após instanciação e carregamento do Codespace experimente executar o seguintes comandos no terminal do VS code online:
