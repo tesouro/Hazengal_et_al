@@ -1,19 +1,17 @@
 {
-	"name": "Julia 1.6.4 + Dynare Codespace",
-	"dockerFile": ".devcontainer/Dockerfile",
-
-	// Persistent volume to cache Julia packages (avoids reinstall)
-	"mounts": [
-		"source=julia_cache,target=/home/vscode/.julia,type=volume"
-	],
-
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"julialang.language-julia"
-			]
-		}
-	},
-
-	"remoteUser": "vscode"
+  "name": "Julia 1.6.4 (Codespaces)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/julialang/devcontainer-features/julia:1": {
+      "channel": "1.6.4"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "julialang.language-julia"
+      ]
+    }
+  },
+  "postCreateCommand": "julia -v"
 }
